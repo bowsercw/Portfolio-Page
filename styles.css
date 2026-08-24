@@ -132,6 +132,7 @@ body {
 
 .skills h2,
 .projects h2,
+.courses h2,
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -254,7 +255,7 @@ body {
 .tag {
     background-color: var(--light-gray);
     color: var(--accent-color);
-    padding: 0: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+    padding: 1px 8px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
@@ -312,6 +313,76 @@ body {
     transform: translateY(-2px);
 }
 
+.courses {
+    padding: 80px 2rem;
+    background-color: var(--secondary-color);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+}
+
+.course-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-image img {
+    max-height: 150px;
+    max-width: 90%;
+    object-fit: contain;
+}
+
+.course-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.course-card p {
+    padding: 0 1.5rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.course-tags {
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.course-link {
+    display: inline-block;
+    padding: 0 1.5rem 1.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.course-link:hover {
+    color: #0052cc;
+}
+
 .footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -348,7 +419,7 @@ body {
         min-height: 400px;
     }
     
-    .skills, .projects, .contact {
+    .skills, .projects, .courses, .contact {
         padding: 60px 2rem;
     }
 }
